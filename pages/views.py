@@ -3,6 +3,8 @@ from accounts.models import User
 from accounts.forms import UserForm,LoginForm
 from django.contrib.auth import login,logout
 from django.contrib.auth.decorators import login_required
+from pages.models import LetterModel
+from pages.forms import LetterForm
 
 def registerView(request):
     form = UserForm()
@@ -29,7 +31,18 @@ def loginView(request):
 
 @login_required(login_url="login page")
 def letterView(request):
-    return render(request, 'letter.html', {})
+    form = LetterForm()
+    user = request.user
+
+    if request.POST:
+        form = LetterForm(request.POST)
+
+        if form.is_valid():
+            LetterModel(author=user, letter=form.cleaned_data['letter']).save()
+            return redirect("home page")
+
+
+    return render(request, 'letter.html', {'letterform':form})
 
 @login_required(login_url="login page")
 def homepageView(request):
@@ -44,3 +57,5 @@ def logoutView(request):
         return redirect('login page')
 
     return render(request, 'homepage.html', {})
+
+

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7754a184-606b-473e-9a25-5930e7c2a000" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecretSanta/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/homepage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/templates/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/letter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -29,7 +28,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1VM1uOb9f35VBTzCLVUl2StZh1d" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -86,7 +87,8 @@
       <updated>1577048371889</updated>
       <workItem from="1577048373145" duration="1896000" />
       <workItem from="1577050317065" duration="799000" />
-      <workItem from="1577051265499" duration="5055000" />
+      <workItem from="1577051265499" duration="5800000" />
+      <workItem from="1577057140333" duration="1039000" />
     </task>
     <servers />
   </component>
@@ -98,7 +100,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

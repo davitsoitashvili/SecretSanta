@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,21 +6,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Home Page</title>
   </head>
   <body>
   <div>
+      <img style="width: 100%;height: 400px" src="{% static "images/santaimage.jpg" %}" alt="image loading...">
   <p style="text-align: center; font-size: 50px; color: red"> Welcome {{ person }}</p>
 
   <form action="{% url 'logout' %}" method="get">
     {% csrf_token %}
-
+       <button class="btn btn-primary" style="width:200px;float: right" type="submit" value="logout">გამოსვლა</button>
 
 </form>
-      <button class="btn btn-primary" style="width:200px;float: right" type="submit" value="logout">გამოსვლა</button>
+
 
 
 

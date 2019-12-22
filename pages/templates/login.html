@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,6 +12,7 @@
     <title>Log In</title>
   </head>
   <body>
+  <img style="width: 100%;height: 400px" src="{% static "images/santaimage.jpg" %}" alt="image loading...">
 
   <div style="text-align: center">
   <form method="post", action="{% url 'login page' %}">
@@ -31,7 +33,7 @@
 </form>
 
    <form action="{% url 'register page' %}", method="get" style="text-align: center">
-        <button class="btn btn-success" type="submit" value="Sign In" style="width: 400px;height: 50px; margin-top: 20px">Registration</button>
+        <button class="btn btn-success" type="submit" value="Sign In" style="width: 400px;height: 50px; margin-top: 20px;margin-bottom: 20px">Registration</button>
    </form>
 
   </div>

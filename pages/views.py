@@ -1,3 +1,5 @@
+from sqlite3 import IntegrityError
+
 from django.shortcuts import render,redirect
 from accounts.models import User
 from accounts.forms import UserForm,LoginForm
@@ -49,6 +51,12 @@ def letterView(request):
 @login_required(login_url="login page")
 def homepageView(request):
     santainfo = {}
+    base = {}
+    array = []
+    newArray = []
+    arrayPerson = []
+    arraySanta = []
+    resultDict = {}
     person = request.user
     santa = request.user.email
     players = SecretSanta.objects.all()
@@ -57,28 +65,8 @@ def homepageView(request):
             santainfo['player'] = f"თქვენ ხართ სეკრეტ სანტა {player.player}-სთვის"
             santainfo['letter'] = player.text
             break
-        else:
+    else:
             santainfo['player'] = "დაელოდეთ ახალ მოთამაშეს"
-
-    return render(request, 'homepage.html', {'person':person,"santainfo":santainfo})
-
-
-@login_required(login_url="login page")
-def logoutView(request):
-    if request.GET:
-        logout(request)
-        return redirect('login page')
-
-    return render(request, 'homepage.html', {})
-
-def secretSantaView(request):
-
-    base = {}
-    array = []
-    newArray = []
-    arrayPerson = []
-    arraySanta = []
-    resultDict = {}
 
     def addPerson(name, surname, email):
         base[len(base) + 1] = [name, surname, email]
@@ -98,7 +86,7 @@ def secretSantaView(request):
                 array.remove(people[1])
 
             else:
-                array.append("დაელოდეთ ახალ მოთამაშეს")
+                array.append("თქვენ ხართ ადმინისტრატორი")
                 people = random.sample(array, 2)
                 newArray.append(people)
                 array.remove(people[0])
@@ -132,7 +120,6 @@ def secretSantaView(request):
 
     Result()
 
-    SecretSanta.objects.all().delete()
 
     for santa,gamer in resultDict.items():
         try:
@@ -140,8 +127,21 @@ def secretSantaView(request):
         except (KeyError):
             continue
 
+        except:
+            continue
 
-    return render(request, 'homepage.html', {"resultbase":resultDict,"letterDict":letterDict})
+    return render(request, 'homepage.html', {'person':person,"santainfo":santainfo})
+
+
+@login_required(login_url="login page")
+def logoutView(request):
+    if request.GET:
+        logout(request)
+        return redirect('login page')
+
+    return render(request, 'homepage.html', {})
+
+
 
 
 

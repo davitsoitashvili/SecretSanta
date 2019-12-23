@@ -1,5 +1,4 @@
 from sqlite3 import IntegrityError
-
 from django.shortcuts import render,redirect
 from accounts.models import User
 from accounts.forms import UserForm,LoginForm
@@ -8,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from pages.models import LetterModel,SecretSanta
 from pages.forms import LetterForm
 import random
+from django.http import Http404
 
 def registerView(request):
     form = UserForm()
@@ -27,9 +27,12 @@ def loginView(request):
         form = LoginForm(data=request.POST)
         if form.is_valid():
             user = form.get_user()
-            login(request,user)
-            return redirect("home page")
-
+            if user.is_staff:
+                login(request,user)
+                return redirect("secret santa")
+            else:
+                login(request, user)
+                return redirect("home page")
 
     return render(request, 'login.html', {"loginform":form})
 
@@ -51,12 +54,6 @@ def letterView(request):
 @login_required(login_url="login page")
 def homepageView(request):
     santainfo = {}
-    base = {}
-    array = []
-    newArray = []
-    arrayPerson = []
-    arraySanta = []
-    resultDict = {}
     person = request.user
     santa = request.user.email
     players = SecretSanta.objects.all()
@@ -68,9 +65,33 @@ def homepageView(request):
     else:
             santainfo['player'] = "დაელოდეთ ახალ მოთამაშეს"
 
+    return render(request, 'homepage.html', {'person': person, "santainfo": santainfo})
+
+
+
+@login_required(login_url="login page")
+def logoutView(request):
+    if request.GET:
+        logout(request)
+        return redirect('login page')
+
+    return render(request, 'homepage.html', {})
+
+
+@login_required(login_url="login page")
+def secretSantaView(request):
+    base = {}
+    array = []
+    newArray = []
+    arrayPerson = []
+    arraySanta = []
+    resultDict = {}
+
+    if request.user.is_staff != True:
+        raise Http404
+
     def addPerson(name, surname, email):
         base[len(base) + 1] = [name, surname, email]
-
 
     def Result():
         for id, personInfo in base.items():
@@ -106,6 +127,7 @@ def homepageView(request):
 
         return resultDict
 
+
     players = User.objects.all()
     letters = LetterModel.objects.all()
 
@@ -114,14 +136,14 @@ def homepageView(request):
     for lett in letters:
         letterDict[lett.author.email] = lett.letter
 
-
     for player in players:
         addPerson(player.name, player.surname, player.email)
 
-    Result()
+    if request.POST:
+        Result()
 
 
-    for santa,gamer in resultDict.items():
+    for santa, gamer in resultDict.items():
         try:
             SecretSanta(santa=santa, player=gamer, text=letterDict[gamer]).save()
         except (KeyError):
@@ -130,18 +152,9 @@ def homepageView(request):
         except:
             continue
 
-    return render(request, 'homepage.html', {'person':person,"santainfo":santainfo})
+    allplayers = SecretSanta.objects.all()
 
-
-@login_required(login_url="login page")
-def logoutView(request):
-    if request.GET:
-        logout(request)
-        return redirect('login page')
-
-    return render(request, 'homepage.html', {})
-
-
+    return render(request, 'secretsanta.html', {"players":allplayers, "info":resultDict})
 
 
 

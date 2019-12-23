@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7754a184-606b-473e-9a25-5930e7c2a000" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretSanta/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -33,7 +38,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Full Projects/Website" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -93,7 +98,10 @@
       <workItem from="1577115191929" duration="1612000" />
       <workItem from="1577116976693" duration="6698000" />
       <workItem from="1577125140514" duration="82000" />
-      <workItem from="1577125646312" duration="2332000" />
+      <workItem from="1577125646312" duration="3073000" />
+      <workItem from="1577129928388" duration="306000" />
+      <workItem from="1577130431197" duration="532000" />
+      <workItem from="1577131127430" duration="4828000" />
     </task>
     <servers />
   </component>

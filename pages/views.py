@@ -48,9 +48,16 @@ def letterView(request):
 
 @login_required(login_url="login page")
 def homepageView(request):
+    santainfo = {}
     person = request.user.get_username()
-    players = User.objects.all()
-    return render(request, 'homepage.html', {'person':person,"players":players})
+    santa = request.user.email
+    players = SecretSanta.objects.all()
+    for player in players:
+        if player.santa == santa:
+            santainfo['player'] = player.player
+            santainfo['letter'] = player.text
+
+    return render(request, 'homepage.html', {'person':person,"santainfo":santainfo})
 
 
 @login_required(login_url="login page")

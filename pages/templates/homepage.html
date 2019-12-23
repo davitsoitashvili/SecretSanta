@@ -13,19 +13,34 @@
   <body>
   <div>
       <img style="width: 100%;height: 400px" src="{% static "images/santaimage.jpg" %}" alt="image loading...">
-  <p style="text-align: center; font-size: 50px; color: red"> Welcome {{ person }}</p>
+
 
   <form action="{% url 'logout' %}" method="get">
     {% csrf_token %}
-       <button class="btn btn-primary" style="width:200px;float: right" type="submit" value="logout">გამოსვლა</button>
 
+       <button class="btn btn-primary" style="width:200px;float: right;" type="submit" value="logout">გამოსვლა</button>
+       <p style="text-align: center; font-size: 25px; color: red;float: right"> სახელი,გვარი: {{ person }}| </p>
 </form>
   </div>
-  {{ resultbase }}
-  <p>################################</p>
-  {{ letterDict }}
-  <p>##############################</p>
-  {{ k }}
+
+
+      <p style="font-size: 30px; color: green;float: left;text-align: center">You are secret santa for {{ santainfo.player }}</p>
+      <br>
+  <div style="text-align: center">
+  <p style="font-size: 40px; color: red">Letter</p>
+  <br>
+  <p style="font-size: 20px; color: orange;text-align: center  ">{{ santainfo.letter }}
+
+      </p>
+  </div>
+
+{#  {{ resultbase }}#}
+{#  <p>################################</p>#}
+{#  {{ letterDict }}#}
+{#  <p>##############################</p>#}
+{#  {{ k }}#}
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

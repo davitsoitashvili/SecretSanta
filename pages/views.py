@@ -54,9 +54,11 @@ def homepageView(request):
     players = SecretSanta.objects.all()
     for player in players:
         if player.santa == santa:
-            santainfo['player'] = player.player
+            santainfo['player'] = f"თქვენ ხართ სეკრეტ სანტა {player.player}-სთვის"
             santainfo['letter'] = player.text
-
+            break
+        else:
+            santainfo['player'] = "დაელოდეთ ახალ მოთამაშეს"
 
     return render(request, 'homepage.html', {'person':person,"santainfo":santainfo})
 
@@ -137,7 +139,6 @@ def secretSantaView(request):
             SecretSanta(santa=santa, player=gamer, text=letterDict[gamer]).save()
         except (KeyError):
             continue
-
 
 
     return render(request, 'homepage.html', {"resultbase":resultDict,"letterDict":letterDict})

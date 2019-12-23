@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7754a184-606b-473e-9a25-5930e7c2a000" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecretSanta/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/homepage.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +94,7 @@
       <workItem from="1577115191929" duration="1612000" />
       <workItem from="1577116976693" duration="6698000" />
       <workItem from="1577125140514" duration="82000" />
-      <workItem from="1577125646312" duration="534000" />
+      <workItem from="1577125646312" duration="1084000" />
     </task>
     <servers />
   </component>

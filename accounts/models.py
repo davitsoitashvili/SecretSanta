@@ -40,6 +40,7 @@ class User(AbstractBaseUser):
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
 
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['name','surname', 'age']
 
@@ -52,7 +53,12 @@ class User(AbstractBaseUser):
         return self.is_admin
 
     def __str__(self):
+        return self.email
+
+    def get_username(self):
         return f"{self.name} {self.surname}"
+
+
 
 
 

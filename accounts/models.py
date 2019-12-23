@@ -55,8 +55,7 @@ class User(AbstractBaseUser):
     def __str__(self):
         return self.email
 
-    def get_username(self):
-        return f"{self.name} {self.surname}"
+
 
 
 

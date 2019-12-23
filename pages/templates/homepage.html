@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Home Page</title>
+    <title>სეკრეტ სანტა</title>
   </head>
   <body>
   <div>
@@ -19,28 +19,20 @@
     {% csrf_token %}
 
        <button class="btn btn-primary" style="width:200px;float: right;" type="submit" value="logout">გამოსვლა</button>
-       <p style="text-align: center; font-size: 25px; color: red;float: right"> სახელი,გვარი: {{ person }}| </p>
+       <p style="text-align: center; font-size: 25px; color: black;float: right;margin-right: 10px"> თქვენი მეილი: {{ person }}  </p>
 </form>
   </div>
 
 
-      <p style="font-size: 30px; color: green;float: left;text-align: center">You are secret santa for {{ santainfo.player }}</p>
+  <div style="text-align: center; margin-top: 10px">
+      <p style="font-size: 30px; color: purple;text-align: center;margin-top: 50px">თქვენ ხართ სეკრეტ სანტა {{ santainfo.player }}-სთვის</p>
       <br>
-  <div style="text-align: center">
-  <p style="font-size: 40px; color: red">Letter</p>
+  <p style="font-size: 40px; color: red">წერილი</p>
   <br>
   <p style="font-size: 20px; color: orange;text-align: center  ">{{ santainfo.letter }}
 
       </p>
   </div>
-
-{#  {{ resultbase }}#}
-{#  <p>################################</p>#}
-{#  {{ letterDict }}#}
-{#  <p>##############################</p>#}
-{#  {{ k }}#}
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

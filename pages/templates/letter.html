@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Letter</title>
+    <title>წერილი სეკრეტ სანტას</title>
   </head>
   <body>
 
@@ -17,9 +17,9 @@
 <div style="text-align: center">
     <form method="post" action="{% url 'letter page' %}">
         {% csrf_token %}
-    <p style="font-size: 40px;color: red">Write letter to Secret Santa</p>
+    <p style="font-size: 40px;color: red">მიწერე წერილი სეკრეტ სანტას</p>
     {{ letterform.letter }}
-    <button class="btn btn-success" type="submit" value="Sign In" style="width: 400px;height: 50px; margin-top: 20px;margin-bottom: 20px">Send Letter</button>
+    <button class="btn btn-success" type="submit" value="Sign In" style="width: 400px;height: 50px; margin-top: 20px;margin-bottom: 20px">გაგზავნა</button>
         </form>
 
 </div>

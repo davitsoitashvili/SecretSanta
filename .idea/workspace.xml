@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7754a184-606b-473e-9a25-5930e7c2a000" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SecretSanta/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SecretSanta/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/letter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/secretsanta.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/santaimage.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +44,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -96,7 +111,14 @@
       <workItem from="1577129928388" duration="306000" />
       <workItem from="1577130431197" duration="532000" />
       <workItem from="1577131127430" duration="4828000" />
-      <workItem from="1577167244333" duration="287000" />
+      <workItem from="1577167244333" duration="1284000" />
+      <workItem from="1577194224163" duration="1045000" />
+      <workItem from="1577454621307" duration="4000" />
+      <workItem from="1577460384029" duration="47000" />
+      <workItem from="1579711938456" duration="545000" />
+      <workItem from="1579712620756" duration="1035000" />
+      <workItem from="1579713837767" duration="237000" />
+      <workItem from="1579714171683" duration="241000" />
     </task>
     <servers />
   </component>

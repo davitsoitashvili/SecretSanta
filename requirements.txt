@@ -79,7 +79,7 @@ pywin32-ctypes==0.2.0
 pyxdg==0.25
 PyYAML==3.12
 query-string==2019.4.13
-reportlab==3.4.0
+reportlab==3.5.55
 request==2019.4.13
 requests==2.22.0
 requests-unixsocket==0.1.5
